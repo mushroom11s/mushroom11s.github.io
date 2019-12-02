@@ -127,6 +127,12 @@ body {
     text-align: center;
 }
 
+.home {
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+
 @media only screen and (max-width: 720px) {
     #minion_options {
         top: 10px;
