@@ -1,29 +1,65 @@
----
-layout: page
-title: 首页
-css: [common.css,page.css]
-js: [blog.js]
----
-<div class="page page-index animation-fade-up">
-	{% for post in site.posts  %}
-		{% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-		{% capture post_previous_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-		{% capture post_next_year %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- Make sure mobile width is width of mobile viewport-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/minioneye.ico"/>
+    <title>Minions!</title>
+    <!-- Style sheets: Including Bootstrap and Font Awesome (svg icons) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
 
-		{% if forloop.first or post_next_year != post_year %}
-		<div class="list-post"><h2 id="{{post_year}}">{{post_year}}</h2><ul>
-		{% endif %}
+    <!--Scripts: including jQuery and bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <!--Add additional scripts here-->
+    <script src="scripts/base.js?version=1"></script>
+    <script src="scripts/minion.js?version=6"></script>
+</head>
+<body>
+<div class="header">
 
-		<li>
-			<span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-			<a href="{{ site.baseUrl | append: post.url }}" class="title hover-underline">{{ post.title }}</a>
-			{% for categorie in post.categories %}
-			<a href="{{site.baseUrl}}/pages/categories.html#{{ categorie }}" class="category hover-underline">{{ categorie }}</a>
-			{% endfor %}
-		</li>
-		
-		{% if forloop.last or post_previous_year != post_year %}
-		</ul></div>
-		{% endif %}
-	{% endfor %}
 </div>
+<div class="container-fluid">
+    <!--All page content goes here -->
+    <div class="mainContent">
+        <div id="band">
+        </div>
+        <div class="eye_wrapper" id="eye1">
+            <div class="eye_ring_metal"></div>
+            <div class="eye_ring"></div>
+            <div class="eye_pupil_wrapper">
+                <div class="eye_pupil_outer"></div>
+                <div class="eye_pupil_inner"></div>
+                <div class="eye_pupil_glow"></div>
+            </div>
+        </div>
+        <div class="eye_wrapper" id="eye2">
+            <div class="eye_ring_metal"></div>
+            <div class="eye_ring"></div>
+            <div class="eye_pupil_wrapper">
+                <div class="eye_pupil_outer"></div>
+                <div class="eye_pupil_inner"></div>
+                <div class="eye_pupil_glow"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_fascade">
+</div>
+<div class="footer">
+    <span id="minion_options">
+      Stuart <input type="radio" id="stuart" style='margin-right:10px;'>
+      Kevin <input type="radio" id="kevin" style="margin-right:10px;">
+      Animate <input type="checkbox" id="animate_eyes">
+    </span>
+
+</div>
+</body>
+</html>
