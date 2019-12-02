@@ -126,7 +126,7 @@ function random_eye(){
       $(".eye_pupil_wrapper").css("top", (offy * Math.random(0,1)*30));
     }
     mouse_inactivity++;
-  }, 5000);
+  }, 2500);
 }
 function toggleFullScreen() {
   if (!document.fullscreenElement && // alternative standard method
