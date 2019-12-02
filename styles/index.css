@@ -132,12 +132,19 @@ body {
     position: absolute;
     top: 25px;
     left: 10px;
+    font-family: INDEX_FONT;
 }
 
 .tab_bar_logo {
-    position: relative;
+    position: absolute;
     top: 20px;
     left: 150px;
+    margin-left: 15px;
+}
+
+@font-face {
+    font-family: 'INDEX_FONT';
+    src: url('../static/font/hybytj.ttf');
 }
 
 @media only screen and (max-width: 720px) {
