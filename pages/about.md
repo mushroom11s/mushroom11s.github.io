@@ -9,6 +9,6 @@ title: 关于我
 
 ## 联系我
 
-- Email : <a href = "mailto: zbl686868@126.com">Send Email</a>
+- Email : <a href = "mailto: mail.mushroom11s.com">Send Email</a>
 
 - GitHub : [Home Page](https://github.com/mushroom11s)
